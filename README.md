@@ -17,11 +17,62 @@ The script executes a series of steps to initiate the captive portal:
 5. **Restore Settings**: Finally, the script re-enables the firewall and resets any changes made to the proxy settings.
 
 ## Usage
-To use this script:
+This section guides you through the process of using the Captive Portal Assistant script.
 
-1. Clone the repository or download the script to your local machine.
-2. Ensure you have the necessary permissions to execute the script (you might need to run it with `sudo` depending on your system setup).
-3. Run the script in a terminal when connected to a public Wi-Fi network that requires a captive portal login.
+### Prerequisites
+Before running the script, ensure that:
+1. **You are using a Linux-based operating system**, preferably Ubuntu or a similar distribution.
+2. **You have `nmcli` (Network Manager Command Line Interface) installed**. This tool is typically pre-installed on many Linux distributions.
+
+### Installation
+1. **Clone the Repository or Download the Script:**
+   - If you're familiar with Git, clone the repository using:
+     ```bash
+     git clone https://github.com/[your-username]/captiveportal.git
+     ```
+   - Alternatively, you can download the script directly from the GitHub page.
+
+2. **Navigate to the Script Directory:**
+   - If you cloned the repository, navigate to the cloned directory:
+     ```bash
+     cd captiveportal
+     ```
+   - If you downloaded the script, navigate to the location where you saved it.
+
+3. **Make the Script Executable:**
+   - Grant execution permissions to the script:
+     ```bash
+     chmod +x captiveportal.sh
+     ```
+
+### Running the Script
+1. **Connect to a Wi-Fi Network:**
+   - Ensure you are connected to the Wi-Fi network that requires a captive portal login.
+
+2. **Execute the Script:**
+   - Run the script by typing:
+     ```bash
+     ./captiveportal.sh
+     ```
+   - If prompted for a password, enter your user password. This is necessary for commands that require administrative privileges.
+
+3. **Follow On-Screen Instructions:**
+   - The script will attempt to trigger the captive portal. Pay attention to any on-screen prompts or browser windows that might open.
+
+4. **Reconnect if Necessary:**
+   - If the captive portal does not appear on the first attempt, you may run the script again or manually navigate to a non-HTTPS website (like `http://neverssl.com`) to trigger the portal.
+
+### Post-Execution
+- Once you have completed the login steps in the captive portal, your internet access should be established.
+- The script will automatically revert any changes it made to the system settings, like re-enabling the firewall.
+
+### Troubleshooting
+- If you encounter issues, ensure your Wi-Fi is active and you are within range of the network.
+- Check if `nmcli` is correctly installed and functioning on your system.
+
+## Notes
+- This script is designed for convenience and is not guaranteed to work on all networks, as captive portal configurations can vary widely.
+- Running the script with administrative privileges (using `sudo`) might be necessary depending on your system’s configuration.
 
 ## Important Notes
 - **Permissions**: Some commands in the script (like manipulating the firewall or network services) require administrative privileges. Make sure to run the script with appropriate permissions.
