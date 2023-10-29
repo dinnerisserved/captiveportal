@@ -59,6 +59,6 @@ Contributions, issues, and feature requests are welcome. Feel free to check [iss
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-Project Link: [https://github.com/yourusername/captiveportal](https://github.com/yourusername/captiveportal)
+Project Link: [https://github.com/yourusername/captiveportal](https://github.com/dinnerisserved/captiveportal)
 
 ---
